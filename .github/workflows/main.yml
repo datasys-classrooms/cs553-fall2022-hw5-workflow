@@ -1,0 +1,23 @@
+name: HW5_CI
+
+on:
+  workflow_call:
+
+jobs:
+  main-work:
+    runs-on: hw-5
+    timeout-minutes: 20
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - uses: actions/checkout@v2
+      - name: Copying user repo
+        run: |
+          cp -a * /home/hoplite/runner-data/
+      - uses: garygrossgarten/github-action-ssh@release
+        with:
+          host: 10.10.10.113
+          username: hoplite
+          password: 123
+          command: |
+            echo "From hw5-workflow repo"
