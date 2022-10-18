@@ -27,4 +27,6 @@ jobs:
           username: hoplite
           password: 123
           command: |
+            ls -la
+            pwd
             bash run-mysort.sh
