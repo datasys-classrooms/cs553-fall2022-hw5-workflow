@@ -27,4 +27,5 @@ jobs:
           username: hoplite
           password: 123
           command: |
+            ls -la
             echo "From hw5-workflow repo"
