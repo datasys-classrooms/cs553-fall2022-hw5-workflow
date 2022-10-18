@@ -20,7 +20,7 @@ jobs:
       - uses: actions/checkout@v2
       - name: Copying user repo
         run: |
-          echo ""
+          cp -a * /home/hoplite/runner-data/
       - uses: garygrossgarten/github-action-ssh@release
         with:
           host: 10.10.10.113
