@@ -29,3 +29,4 @@ jobs:
           command: |
             ls -la
             echo "From hw5-workflow repo"
+            cat README.md
